@@ -3,8 +3,8 @@ let viz;
 const config = {
   container_id: "viz", // WAJIB: format snake_case
  url: "neo4j+s://d121d14f.databases.neo4j.io",
-user: "neo4j",
-password: "HgTkFZksgtnsvCglaZGyAQfwbjMcJmx-G08jZaT6_mg",
+ user: "neo4j",
+ password: "ouf1CK1PjyiyjR3ykZZiMjaobSbgDrmq8zYT4H7Q92I",
 
   labels: {
     Klub: { label: "nama" },
