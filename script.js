@@ -1,10 +1,10 @@
 let viz;
 
 const config = {
-  container_id: "viz", // WAJIB: format snake_case
- url: "neo4j+s://d121d14f.databases.neo4j.io",
- user: "neo4j",
- password: "ouf1CK1PjyiyjR3ykZZiMjaobSbgDrmq8zYT4H7Q92I",
+  container_id: "viz",
+  url: "neo4j+s://9c026270.databases.neo4j.io", // ✅ SUDAH BETUL
+  user: "neo4j",
+  password: "ouf1CK1PjyiyjR3ykZZiMjaobSbgDrmq8zYT4H7Q92I",
 
   labels: {
     Klub: { label: "nama" },
@@ -50,7 +50,7 @@ const config = {
         color: { color: "#ff9900", highlight: "#cc7a00", hover: "#cc7a00" }
       }
     },
-    '*': {
+    "*": {
       [NeoVis.NEOVIS_ADVANCED_CONFIG]: {
         color: { color: "#999", highlight: "#666", hover: "#666" }
       }
@@ -61,13 +61,13 @@ const config = {
 
   visConfig: {
     nodes: {
-      shape: 'dot',
+      shape: "dot",
       size: 16,
       scaling: { min: 10, max: 30 },
-      font: { size: 14, face: 'Arial', color: '#333' }
+      font: { size: 14, face: "Arial", color: "#333" }
     },
     edges: {
-      smooth: { enabled: true, type: 'dynamic' },
+      smooth: { enabled: true, type: "dynamic" },
       arrows: { to: { enabled: true, scaleFactor: 0.8 } }
     },
     physics: {
@@ -101,7 +101,7 @@ window.addEventListener("DOMContentLoaded", () => {
     if (q) renderCypher(q);
   });
 
-  input.addEventListener("keydown", e => {
+  input.addEventListener("keydown", (e) => {
     if (e.key === "Enter") {
       e.preventDefault();
       btn.click();
