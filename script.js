@@ -1,12 +1,11 @@
 let viz;
 
 const config = {
-  containerId: "viz",
-  neo4j: {
-    serverUrl: "neo4j+s://c9d4cc70.databases.neo4j.io",
-    serverUser: "neo4j",
-    serverPassword: "ugKjXhqmU4bTsFrS4_uAPlZ0ljeaW3DFyUgAGzia8Y8"
-  },
+  container_id: "viz", // Wajib: gunakan snake_case
+  server_url: "neo4j+s://c9d4cc70.databases.neo4j.io", // Neo4j Aura secure URL
+  server_user: "neo4j",
+  server_password: "ugKjXhqmU4bTsFrS4_uAPlZ0ljeaW3DFyUgAGzia8Y8",
+
   labels: {
     Klub: { label: "nama" },
     Liga: { label: "nama" },
@@ -14,6 +13,7 @@ const config = {
     Kejuaraan: { label: "nama" },
     Kompetisi: { label: "nama" }
   },
+
   relationships: {
     BERMAIN_DI: {
       [NeoVis.NEOVIS_ADVANCED_CONFIG]: {
@@ -56,7 +56,9 @@ const config = {
       }
     }
   },
-  initialCypher: "MATCH (n)-[r]->(m) RETURN n, r, m",
+
+  initial_cypher: "MATCH (n)-[r]->(m) RETURN n, r, m LIMIT 100",
+
   visConfig: {
     nodes: {
       shape: 'dot',
@@ -89,7 +91,7 @@ window.addEventListener("DOMContentLoaded", () => {
   const input = document.getElementById("cypher");
   const btn = document.getElementById("reload");
 
-  input.value = config.initialCypher;
+  input.value = config.initial_cypher;
 
   viz = new NeoVis.default(config);
   viz.render();
