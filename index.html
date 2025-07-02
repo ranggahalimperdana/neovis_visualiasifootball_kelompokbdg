@@ -3,55 +3,41 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="./img/logo.png" type="image/x-icon">
   <title>Visualisasi Sepak Bola Eropa</title>
 
-  <!-- ===== Font Inter (Google Fonts) ===== -->
+  <!-- Google Font Inter -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
-
-  <!-- ===== Style Utama ===== -->
+  <!-- CSS -->
   <link rel="stylesheet" href="style.css" />
-
-  <!-- ===== Neovis.js Library ===== -->
+  <!-- Neovis.js -->
   <script src="https://unpkg.com/neovis.js@2.1.0/dist/neovis.js"></script>
 </head>
 <body>
-
-  <!-- ===== HEADER: Judul utama & deskripsi singkat ===== -->
   <header>
     <div class="wrapper">
       <h1>Visualisasi Sepak Bola Eropa</h1>
       <p>Eksplorasi data klub, liga, musim, dan kejuaraan dengan Neo4j & Neovis.js</p>
+      <br />
+      <p>Kelompok Basis Data Grafik</p>
     </div>
   </header>
 
-  <!-- ===== MAIN: Input query dan tampilan graf ===== -->
   <main>
     <div class="wrapper">
-
-      <!-- ===== INPUT GROUP: Input & tombol query ===== -->
       <div class="input-group">
-        <input
-          id="cypher"
-          type="text"
-          placeholder="MATCH (n)-[r]->(m) RETURN n, r, m"
-          aria-label="Cypher Query"
-        />
-        <button id="reload" aria-label="Jalankan query">Jalankan</button>
+        <input id="cypher" type="text" placeholder="MATCH (n)-[r]->(m) RETURN n, r, m" />
+        <button id="reload">Jalankan</button>
       </div>
-
-      <!-- ===== GRAF NEOVIS ===== -->
       <div id="viz"></div>
     </div>
   </main>
 
-  <!-- ===== FOOTER ===== -->
   <footer>
     <div class="wrapper">
       © 2025 Kelompok Neo4j — Visualisasi Sepak Bola Eropa
     </div>
   </footer>
-
-  <!-- ===== SCRIPT NEOVIS & HANDLER ===== -->
   <script src="script.js"></script>
 </body>
 </html>

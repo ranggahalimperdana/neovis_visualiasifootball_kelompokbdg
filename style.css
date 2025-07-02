@@ -1,8 +1,3 @@
-/* ================================================
-   RESET & GLOBAL STYLE
-   - Mengatur padding, margin, dan box-sizing default
-   - Menetapkan font dan background utama
-================================================= */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -18,11 +13,6 @@ body {
   flex-direction: column;
 }
 
-/* ================================================
-   WRAPPER UTAMA
-   - Digunakan untuk membatasi konten di tengah halaman
-   - Memberi padding sisi kiri-kanan
-================================================= */
 .wrapper {
   max-width: 1240px;
   margin: 0 auto;
@@ -30,11 +20,6 @@ body {
   width: 100%;
 }
 
-/* ================================================
-   HEADER
-   - Judul utama halaman
-   - Deskripsi singkat
-================================================= */
 header {
   background-color: #ffffff;
   border-bottom: 1px solid #e5e7eb;
@@ -53,19 +38,11 @@ header p {
   color: #6b7280;
 }
 
-/* ================================================
-   MAIN CONTENT
-   - Section utama yang memuat input dan visualisasi
-================================================= */
 main {
   flex: 1;
   padding: 32px 0;
 }
 
-/* ================================================
-   INPUT GROUP
-   - Menyusun kolom input dan tombol dalam satu baris
-================================================= */
 .input-group {
   display: flex;
   flex-wrap: wrap;
@@ -85,7 +62,6 @@ main {
   background-color: white;
   outline: none;
   transition: border-color 0.3s, box-shadow 0.3s;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
 }
 
 #cypher:focus {
@@ -109,35 +85,18 @@ main {
   transform: translateY(-1px);
 }
 
-/* ================================================
-   VISUALISASI GRAF NEO4J
-   - Ukuran besar, tidak mentok sisi layar
-   - Responsif dan elegan
-================================================= */
 #viz {
   width: 100%;
   height: 80vh;
   min-height: 700px;
-  max-height: 1200px;
   background-color: white;
   border: 1px solid #e5e7eb;
   border-radius: 10px;
   padding: 12px;
-  margin: 0 auto 20px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
-  transition: box-shadow 0.3s ease;
   overflow: hidden;
 }
 
-#viz:hover {
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
-}
-
-/* ================================================
-   FOOTER
-   - Diletakkan di bagian bawah
-   - Menampilkan informasi pembuat atau kelompok
-================================================= */
 footer {
   text-align: center;
   padding: 24px 0;
@@ -145,31 +104,4 @@ footer {
   color: #6b7280;
   background-color: #ffffff;
   border-top: 1px solid #e5e7eb;
-}
-
-/* ================================================
-   RESPONSIVE - HP & TABLET
-================================================= */
-@media (max-width: 768px) {
-  header h1 {
-    font-size: 1.8rem;
-  }
-
-  #viz {
-    height: 70vh;
-    min-height: 500px;
-  }
-
-  #cypher {
-    font-size: 0.95rem;
-  }
-
-  #reload {
-    padding: 10px 16px;
-    font-size: 0.95rem;
-  }
-
-  footer {
-    padding: 16px 12px;
-  }
 }

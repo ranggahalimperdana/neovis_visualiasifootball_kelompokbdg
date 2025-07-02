@@ -3,9 +3,9 @@ let viz;
 const config = {
   containerId: "viz",
   neo4j: {
-    serverUrl: "bolt://localhost:7687",
+    serverUrl: "neo4j+s://c9d4cc70.databases.neo4j.io",
     serverUser: "neo4j",
-    serverPassword: "adminadmin"
+    serverPassword: "ugKjXhqmU4bTsFrS4_uAPlZ0ljeaW3DFyUgAGzia8Y8"
   },
   labels: {
     Klub: { label: "nama" },
