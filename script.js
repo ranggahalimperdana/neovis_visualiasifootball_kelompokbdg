@@ -1,10 +1,10 @@
 let viz;
 
 const config = {
-  container_id: "viz", // Wajib: gunakan snake_case
-  server_url: "neo4j+s://c9d4cc70.databases.neo4j.io", // Neo4j Aura secure URL
+  container_id: "viz", // WAJIB: format snake_case
+  server_url: "neo4j+s://d121d14f.databases.neo4j.io", // ✅ Ganti ke instance baru
   server_user: "neo4j",
-  server_password: "ugKjXhqmU4bTsFrS4_uAPlZ0ljeaW3DFyUgAGzia8Y8",
+  server_password: "HgTkFZksgtnsvCglaZGyAQfwbjMcJmx-G08jZaT6_mg", // ✅ Password baru kamu
 
   labels: {
     Klub: { label: "nama" },
